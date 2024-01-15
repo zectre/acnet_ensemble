@@ -153,21 +153,21 @@ hypermodel.fit([TOA_xtrain, angles_xtrain, AOT_xtrain], ytrain_iCOR,
                batch_size=256, epochs=best_epoch)
 
 
-def show_train_history(train_history, train, validation):
-    plt.plot(train_history.history[train])
-    plt.plot(train_history.history[validation])
-    plt.title('First phase')
-    plt.ylabel(train)
-    plt.xlabel('Epoch')
-    plt.legend(['train', 'validation'], loc='upper left')
-    plt.show()
+# def show_train_history(train_history, train, validation):
+#     plt.plot(train_history.history[train])
+#     plt.plot(train_history.history[validation])
+#     plt.title('First phase')
+#     plt.ylabel(train)
+#     plt.xlabel('Epoch')
+#     plt.legend(['train', 'validation'], loc='upper left')
+#     plt.show()
 
-plt.figure(1)
-show_train_history(train_history, 'loss', 'val_loss')
-plt.figure(2)
-show_train_history(train_history, 'mape', 'val_mape')
-plt.figure(3)
-show_train_history(train_history, 'accuracy', 'val_accuracy')
+# plt.figure(1)
+# show_train_history(train_history, 'loss', 'val_loss')
+# plt.figure(2)
+# show_train_history(train_history, 'mape', 'val_mape')
+# plt.figure(3)
+# show_train_history(train_history, 'accuracy', 'val_accuracy')
 
 
 # #  EVALUATE THE PREDICTION RESULT with insitu and iCOR
